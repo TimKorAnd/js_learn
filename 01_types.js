@@ -58,4 +58,27 @@ console.log('' == {})
 console.log(0 == [])
 console.log(0 == {})
 console.log(0 == null)
+console.log(undefined == null)
+
+fn =function(...args){
+
+    console.log(this, args)
+}
+fn(2,3);
+
+function bind(context,fn){
+    return function(){
+        return fn.apply(context, arguments);
+    }
+}
+
+function bind1(context,fn){
+    return function(...args){
+        return fn.apply(context, args); //wo return
+    }
+}
+
+bind({o:1}, fn)(10,'dd')
+
+
 
