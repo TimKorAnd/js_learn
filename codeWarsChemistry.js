@@ -19,7 +19,7 @@ function parseMolecule(formula) {
         let closeBracket  = brackets[startBracket];
         i++;
         //find appropriate bracket
-        while (formula[i] !== closeBracket && openBracketNum === closeBracketNum){
+        while (formula[i] !== closeBracket && openBracketNum !== closeBracketNum){
 
             if (openBracket.includes(formula[i])){
                 openBrackets(formula, i)
@@ -39,6 +39,7 @@ function parseMolecule(formula) {
         //convert to Map
         let openFormula = formula.substr(startBracketIndex, i)
         console.log(openFormula);
+        console.log(formula);
 
     }
 
