@@ -30,7 +30,7 @@ function parseMolecule(formula) {
         //readMultiple(i){
         let multiple = 1;
         let strMultiple =''
-        while (  i < formula.length && typeof +formula[i] === 'number' ) {
+        while (  i < formula.length && +(formula[i]).match(/\d/) !== 0  ) {
             strMultiple += formula[i]
             multiple = +strMultiple || multiple;
             i++
