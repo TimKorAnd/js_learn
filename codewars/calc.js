@@ -10,8 +10,11 @@ var calc = function (expression) {
         }
 
         parseExpr(someExpr) {
-
-            return "";
+            let l, r;
+            let operatorPosition = someExpr.indexOf('+')
+            console.log(operatorPosition);
+            l = someExpr.substr()
+            return ""
         }
     }
 
